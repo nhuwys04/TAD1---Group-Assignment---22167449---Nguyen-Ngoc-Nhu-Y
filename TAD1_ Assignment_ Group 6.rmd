@@ -133,6 +133,7 @@ Key numeric variables such as Salary, Experience, and Age were selected as they 
 
 ```{r}
 ```{r, fig.width=6, fig.height=10}
+# Histogram
 par(mfrow = c(3,1))
 
 hist(data$Salary,
@@ -160,6 +161,7 @@ The distribution of Experience shows that most employees have relatively low to 
 In contrast, Age appears to be more symmetrically distributed, with values relatively evenly spread across the range.
 
 ```{r}
+#Correlations
 cor(data$Salary, data$YearsOfExperience)
 cor(data$Salary, data$Age)
 cor(data$YearsOfExperience, data$Age)
@@ -196,7 +198,9 @@ pairs(data[, c("Salary", "YearsOfExperience", "Age")],
       main = "Pairwise Relationships", 
       pch = 16)
 ```
-Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age. The pair plots confirm strong positive linear relationships across all three variables. Salary increases steadily with Years of Experience, indicating that employees with more accumulated experience tend to earn substantially higher salaries. A similar upward trend is observed between Salary and Age, while Years of Experience and Age are almost perfectly linearly related. These visual patterns reinforce the correlation results and suggest that these variables capturing employee seniority within the organisation.
+Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age. 
+
+The pair plots confirm strong positive linear relationships across all three variables. Salary increases steadily with Years of Experience, indicating that employees with more accumulated experience tend to earn substantially higher salaries. A similar upward trend is observed between Salary and Age, while Years of Experience and Age are almost perfectly linearly related. These visual patterns reinforce the correlation results and suggest that these variables capturing employee seniority within the organisation.
 
 \newpage
 ```{r}
@@ -212,4 +216,12 @@ In addition, Job Level was included to explore how salary varies across differen
 
 The boxplot reveals clear differences in compensation across job levels. Entry-level employees have lower and less variable salaries, while higher job levels exhibit higher median salaries and greater dispersion, including extreme values. Overall, these patterns suggest that Salary is strongly influenced by experience-related factors and organizational hierarchy.
 
+\newpage
+## e) Summary of workforce characteristics
+Overall, this workforce is characterized by a moderately wide age range and varying levels of experience, reflecting a mix of early-career and senior employees. Most employees fall into entry- and mid-level job positions, while senior and executive roles represent a smaller proportion of the organization.
 
+Salary displays a strong right-skewed distribution, indicating that while most employees earn low to mid-range salaries, a small number of senior and executive employees receive substantially higher compensation. This pattern aligns with the observed structure of job levels and organizational hierarchy. In contrast, Age and Years of Experience show more balanced distributions and exhibit a very strong positive relationship, reflecting typical career progression patterns.
+
+Exploratory analysis reveals that salary is strongly associated with seniority-related factors, particularly Years of Experience, Age, and Job Level. Visualizations consistently show higher salaries for employees with greater experience and higher job levels. Other workforce-related variables, such as training hours, overtime, and satisfaction, exhibit greater variability and weaker relationships with compensation.
+
+In summary, the dataset describes an organization where compensation is primarily driven by experience and job hierarchy, with clear differences across job levels and relatively stable demographic patterns. These findings provide a strong foundation for subsequent inferential analyses focusing on salary comparisons and workforce structure.
