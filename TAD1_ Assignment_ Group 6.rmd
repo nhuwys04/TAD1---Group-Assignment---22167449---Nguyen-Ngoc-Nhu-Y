@@ -268,9 +268,9 @@ This selection is also consistent with the earlier exploratory analysis, which i
 
 The statistical hypotheses are formulated as follows:
 
--   **Null hypothesis (H0):** The mean salary of Entry-level employees is **equal** to that of Senior employees ($μEntry = μSenior$)
+-   **Null hypothesis (H0):** The mean salary of Entry-level employees is **equal** to that of Senior-level employees ($μEntry = μSenior$)
 
--   **Alternative hypothesis (H1):** The mean salary of Entry-level employees is **not equal** to that of Senior employees ($μEntry ≠ μSenior$)
+-   **Alternative hypothesis (H1):** The mean salary of Entry-level employees is **not equal** to that of Senior-level employees ($μEntry ≠ μSenior$)
 
 \newpage
 
@@ -284,11 +284,11 @@ t.test(Salary ~ JobLevel,
 
 **Results:**
 
-**- t = -27.085**
+-   **t = -27.085**
 
-**- df = 55.941**
+-   **df = 55.941**
 
-**- p-value \< 2.2e - 16**
+-   **p-value \< 2.2e - 16**
 
 \newpage
 
@@ -381,3 +381,8 @@ This conclusion is further supported by the 84% confidence interval for the mean
 From a human resources perspective, a large salary gap between Entry-level and Senior-level employees is expected and appropriate. Senior-level employees typically possess significantly more experience, take on greater responsibilities, and contribute higher strategic value to the organization. As a result, a markedly higher level of compensation reflects a logical and structured pay progression aligned with career advancement.
 
 Overall, the findings suggest that the organization’s compensation strategy clearly reflects job hierarchy and seniority, providing strong financial incentives for employee development and progression. The salary structure appears to be reasonable, transparent, and consistent with standard compensation practices, supporting both organizational effectiveness and long-term workforce motivation.
+
+\newpage
+
+# \textcolor{blue}{Question 3: Analyzing Categorical Variable Relationships}
+
