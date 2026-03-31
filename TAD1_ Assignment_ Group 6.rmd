@@ -300,3 +300,17 @@ Based on the Welch two-sample t-test results from the previous section, an 84% c
 **The resulting confidence interval is:  [-106,466.63, -95,830.86]**
 
 This interval does not include zero, indicating that there is a statistically meaningful difference in mean salary between the two groups. Specifically, the negative interval suggests that the mean salary of Entry-level employees is significantly lower than that of Senior employees.
+
+```{r}
+# Effect size magnitude
+library(effsize)
+
+cohen.d(Salary ~ JobLevel,
+        data = subset(data, JobLevel %in% c("Entry", "Senior")))
+```
+
+**The effect size: d = -6.014 (large effect)**
+
+The effect size (Cohen’s d = -6.014) is considered extremely large, far exceeding the conventional threshold for a large effect (d = 0.8).
+
+This indicates that the difference in salary between Entry-level and Senior employees is substantial, with minimal overlap between the two distributions. In practical terms, this suggests that job level has a very strong impact on employee compensation.
