@@ -173,4 +173,8 @@ Similarly, Salary and Age are also strongly positively correlated (r = 0.861), s
 
 In addition, Experience and Age exhibit an extremely strong positive correlation (r = 0.983), indicating that these two variables are highly closely related.
 
+\newpage
+
+## d) Pattern and relationships in the data
+
 
