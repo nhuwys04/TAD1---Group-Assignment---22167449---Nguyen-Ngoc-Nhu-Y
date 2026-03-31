@@ -226,6 +226,7 @@ Exploratory analysis reveals that salary is strongly associated with seniority-r
 
 In summary, the dataset describes an organization where compensation is primarily driven by experience and job hierarchy, with clear differences across job levels and relatively stable demographic patterns. These findings provide a strong foundation for subsequent inferential analyses focusing on salary comparisons and workforce structure.
 
+\newpage
 # \textcolor{blue}{Question 2: Comparing Salary Across Job Levels}
 
 ## a1) Compare Entry Level vs Senior Level
@@ -256,8 +257,12 @@ Sufficient sample sizes:
 Moreover, the comparison between Entry and Senior groups is meaningful from an organisational perspective, as it represents early-career versus more experienced employees, allowing for an evaluation of how compensation evolves with career progression.
 
 This selection is also consistent with the earlier exploratory analysis, which indicated that salary is strongly associated with experience and job level.
--   Hi
 
 
+## a2) Hypotheses Testing
+The statistical hypotheses are formulated as follows:
 
+- **Null hypothesis ($H₀$):** The mean salary of Entry-level employees is **equal** to that of Senior employees ($μEntry = μSenior$) 
+
+- **Alternative hypothesis ($H₁$):** The mean salary of Entry-level employees is **not equal** to that of Senior employees ($μEntry ≠ μSenior$)
 
