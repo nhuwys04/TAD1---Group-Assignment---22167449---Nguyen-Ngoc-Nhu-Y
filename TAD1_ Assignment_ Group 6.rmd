@@ -228,3 +228,36 @@ In summary, the dataset describes an organization where compensation is primaril
 
 # \textcolor{blue}{Question 2: Comparing Salary Across Job Levels}
 
+## a1) Compare Entry Level vs Senior Level
+
+```{r}
+table(data$JobLevel)
+aggregate(Salary ~ JobLevel, data, mean)
+```
+Entry and Senior groups were selected to examine differences in mean salary across career stages, because:
+
+
+Substantial difference in mean salary:
+
+- Entry: 51,436
+
+- Senior: 152,585
+
+-> The large difference suggests a strong potential for statistically significant variation between the two groups
+
+Sufficient sample sizes:
+
+- Entry: 70
+
+- Senior: 44
+
+-> Both groups meet the requirements for reliable two-sample statistical testing
+
+Moreover, the comparison between Entry and Senior groups is meaningful from an organisational perspective, as it represents early-career versus more experienced employees, allowing for an evaluation of how compensation evolves with career progression.
+
+This selection is also consistent with the earlier exploratory analysis, which indicated that salary is strongly associated with experience and job level.
+-   Hi
+
+
+
+
