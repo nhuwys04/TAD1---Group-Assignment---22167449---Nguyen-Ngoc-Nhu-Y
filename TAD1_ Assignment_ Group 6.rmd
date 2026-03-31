@@ -396,3 +396,10 @@ tab
 # Display proportions for better interpretation
 prop.table(tab)
 ```
+
+## a.2) Hypotheses testing
+The statistical hypotheses are formulated as follows:
+
+-   **Null hypothesis (H0):** Gender and JobLevel are **independent**.
+
+-   **Alternative hypothesis (H1):** Gender and JobLevel are **not independent**.
