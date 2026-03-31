@@ -31,4 +31,16 @@ Average satisfaction score: 6.6/10
 
 # \textcolor{blue}{Question 1: Conduct a thorough exploratory data analysis of the HR dataset.}
 
+## a) Data Structure and Overview
+
+```{r}
+# Load dataset
+data <- read.csv("group6.csv")
+# Structure of dataset
+str(data)
+head(data)
+```
+
+
+
 
