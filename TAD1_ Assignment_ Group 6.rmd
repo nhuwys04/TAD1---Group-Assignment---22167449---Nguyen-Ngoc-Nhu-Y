@@ -91,5 +91,16 @@ From the output, **Salary shows the strongest evidence of potential outliers:**
 
 Other numeric variables were also examined using the same approach, and no significant outliers were detected based on the IQR rule. Detailed calculations are provided in the Appendix A.
 
+```{r}
+#Visualizations
+hist(data$Salary, breaks=20, col="lightblue", main ="", xlab="Salary")
+```
+
+The histogram of Salary shows a clearly right-skewed distribution.
+
+Most observations are concentrated on the lower end of the scale, approximately between 40000 and 100000, where the bars have the highest frequencies. As salary increases, the frequency of observations declines noticeably, as indicated by the decreasing height of the bars. A small number of observations extend far to the right, reaching values close to 300000, forming a long tail.
+
+This indicates a non-symmetric distribution, where most employees earn lower to mid-range salaries, while a small number receive substantially higher salaries.
+
 
 
