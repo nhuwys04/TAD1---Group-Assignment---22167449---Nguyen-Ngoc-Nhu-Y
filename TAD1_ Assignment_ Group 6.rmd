@@ -159,4 +159,18 @@ The distribution of Experience shows that most employees have relatively low to 
 
 In contrast, Age appears to be more symmetrically distributed, with values relatively evenly spread across the range.
 
+```{r}
+cor(data$Salary, data$YearsOfExperience)
+cor(data$Salary, data$Age)
+cor(data$YearsOfExperience, data$Age)
+```
+
+**Correlation Analysis**
+
+There is a strong positive correlation between Salary and Experience (r = 0.869), indicating that employees with more experience tend to earn higher salaries.
+
+Similarly, Salary and Age are also strongly positively correlated (r = 0.861), suggesting that older employees generally earn higher salaries.
+
+In addition, Experience and Age exhibit an extremely strong positive correlation (r = 0.983), indicating that these two variables are highly closely related.
+
 
