@@ -336,3 +336,19 @@ points(1:2, means, col="red", pch=18, cex=1.5)
 ```
 
 
+```{r}
+# Histogram
+par(mfrow = c(1,2))
+
+hist(data$Salary[data$JobLevel=="Entry"],
+     col="orange",
+     main="Salary of Entry Group",
+     xlab="Salary")
+
+hist(data$Salary[data$JobLevel=="Senior"],
+     col="purple",
+     main="Salary of Senior Group",
+     xlab="Salary")
+```
+
+
