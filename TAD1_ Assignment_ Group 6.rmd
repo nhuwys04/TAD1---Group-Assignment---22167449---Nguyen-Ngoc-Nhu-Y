@@ -98,7 +98,7 @@ hist(data$Salary, breaks=20, col="lightblue", main ="", xlab="Salary")
 
 The histogram of Salary shows a clearly right-skewed distribution.
 
-Most observations are concentrated on the lower end of the scale, approximately between 40000 and 100000, where the bars have the highest frequencies. As salary increases, the frequency of observations declines noticeably, as indicated by the decreasing height of the bars. A small number of observations extend far to the right, reaching values close to 300000, forming a long tail.
+Most observations are concentrated on the lower end of the scale, approximately between 40,000 and 100,000, where the bars have the highest frequencies. As salary increases, the frequency of observations declines noticeably, as indicated by the decreasing height of the bars. A small number of observations extend far to the right, reaching values close to 300,000, forming a long tail.
 
 This indicates a non-symmetric distribution, where most employees earn lower to mid-range salaries, while a small number receive substantially higher salaries.
 
@@ -218,6 +218,7 @@ The boxplot reveals clear differences in compensation across job levels. Entry-l
 
 \newpage
 ## e) Summary of workforce characteristics
+
 Overall, this workforce is characterized by a moderately wide age range and varying levels of experience, reflecting a mix of early-career and senior employees. Most employees fall into entry- and mid-level job positions, while senior and executive roles represent a smaller proportion of the organization.
 
 Salary displays a strong right-skewed distribution, indicating that while most employees earn low to mid-range salaries, a small number of senior and executive employees receive substantially higher compensation. This pattern aligns with the observed structure of job levels and organizational hierarchy. In contrast, Age and Years of Experience show more balanced distributions and exhibit a very strong positive relationship, reflecting typical career progression patterns.
@@ -271,12 +272,12 @@ The statistical hypotheses are formulated as follows:
 ## b) Welch two sample t-test
 
 ```{r}
-t.test(Salary ~ JobLevel,
-       data = subset(data, JobLevel %in% c("Entry", "Senior")),
+t.test(Salary ~ JobLevel, 
+       data = subset(data, JobLevel %in% c("Entry", "Senior")), 
        var.equal = FALSE)
 ```
 
-**Results:**
+Results:
 
 - t = -27.085
 
@@ -284,4 +285,18 @@ t.test(Salary ~ JobLevel,
 
 - p-value < 2.2 × $10⁻¹⁶$
 
+\newpage
+## c) 84% Confidence interval and effect size
 
+```{r}
+# 84% Confident interval
+t.test(Salary ~ JobLevel,
+       data = subset(data, JobLevel %in% c("Entry", "Senior")),
+       var.equal = FALSE,
+       conf.level = 0.84)
+```
+Based on the Welch two-sample t-test results from the previous section, an 84% confidence interval for the difference in mean salaries between Entry-level and Senior-level employees was constructed.
+
+**The resulting confidence interval is:  [-106,466.63, -95,830.86]**
+
+This interval does not include zero, indicating that there is a statistically meaningful difference in mean salary between the two groups. Specifically, the negative interval suggests that the mean salary of Entry-level employees is significantly lower than that of Senior employees.
