@@ -102,5 +102,32 @@ Most observations are concentrated on the lower end of the scale, approximately 
 
 This indicates a non-symmetric distribution, where most employees earn lower to mid-range salaries, while a small number receive substantially higher salaries.
 
+```{r}
+par(mfrow = c(1, 3))
+
+boxplot(data$Salary,
+        col="lightblue",
+        main="Salary",
+        pch=16)
+
+boxplot(data$YearsOfExperience,
+        col="lightgreen",
+        main="Experience",
+        pch=16)
+
+boxplot(data$Age,
+        col="lightpink",
+        main="Age",
+        pch=16)
+```
+
+The boxplots of Salary, Experience, and Age were selected for comparison as they exhibit wider ranges and greater variability relative to other numeric variables, making them more suitable for identifying unusual observations.
+
+Among the three variables, Salary shows the clearest evidence of unusual observations. Specifically, the boxplot displays several data points positioned beyond the upper whisker, indicating the presence of unusually high values. In addition, there is a noticeable gap between the upper edge of the box (IQR) and these points, suggesting a high level of variability at the upper end of the distribution.
+
+In contrast, Experience and Age exhibit more stable and balanced distributions. The boxes (IQRs) are relatively symmetric, with the median located near the center, and all observations fall within the whiskers. No points extend beyond the whiskers.
+
+## c) Key numeric variables
+
 
 
