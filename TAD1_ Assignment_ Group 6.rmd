@@ -53,6 +53,15 @@ The variables in the dataset can be classified into two main types:
 
 Each row in the dataset represents an individual employee, while each column corresponds to a specific attribute describing that employee. This structure allows for analysis of workforce characteristics, including performance, compensation, and workplace behaviour.
 
+## b) Compute and present summary statistics
+
+```{r}
+# summary statistics for all numeric variables in the dataset
+numeric_vars <- sapply(data, is.numeric)
+
+summary(data[, numeric_vars])
+sapply(data[, numeric_vars], sd)
+```
 
 
 
