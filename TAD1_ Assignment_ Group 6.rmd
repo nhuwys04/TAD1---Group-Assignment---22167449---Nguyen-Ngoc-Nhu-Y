@@ -225,3 +225,6 @@ Salary displays a strong right-skewed distribution, indicating that while most e
 Exploratory analysis reveals that salary is strongly associated with seniority-related factors, particularly Years of Experience, Age, and Job Level. Visualizations consistently show higher salaries for employees with greater experience and higher job levels. Other workforce-related variables, such as training hours, overtime, and satisfaction, exhibit greater variability and weaker relationships with compensation.
 
 In summary, the dataset describes an organization where compensation is primarily driven by experience and job hierarchy, with clear differences across job levels and relatively stable demographic patterns. These findings provide a strong foundation for subsequent inferential analyses focusing on salary comparisons and workforce structure.
+
+# \textcolor{blue}{Question 2: Comparing Salary Across Job Levels}
+
