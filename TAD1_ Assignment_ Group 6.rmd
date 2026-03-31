@@ -11,5 +11,24 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# DATASET INFORMATION
+
+Number of employees: 25
+
+Departments: Operations, Marketing, Engineering, Finance, Sales, HR
+
+Job levels: Mid, Senior, Entry, Executive
+
+Age range: 22 - 53 years
+
+Salary range: \$43,095 - \$322,405
+
+Average performance score: 2.8/5
+
+Average satisfaction score: 6.6/10
+
+# ASSIGNMENT QUESTIONS
+
+# \textcolor{blue}{Question 1: Conduct a thorough exploratory data analysis of the HR dataset.}
 
 
