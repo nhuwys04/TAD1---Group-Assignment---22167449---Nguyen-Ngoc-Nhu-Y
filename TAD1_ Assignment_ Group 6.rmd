@@ -129,5 +129,34 @@ In contrast, Experience and Age exhibit more stable and balanced distributions. 
 
 ## c) Key numeric variables
 
+Key numeric variables such as Salary, Experience, and Age were selected as they reflect fundamental workforce characteristics and display clear distributional patterns, making them suitable for analysing trends and relationships within the dataset.
+
+```{r}
+```{r, fig.width=6, fig.height=10}
+par(mfrow = c(3,1))
+
+hist(data$Salary,
+     col="lightblue",
+     main="Distribution of Salary",
+     xlab="Salary")
+
+hist(data$YearsOfExperience,
+     col="lightgreen",
+     main="Distribution of Years of Experience",
+     xlab="Years of Experience")
+
+hist(data$Age,
+     col="lightpink",
+     main="Distribution of Age",
+     xlab="Age")
+```
+
+**Distribution of Key Variables**
+
+The distribution of Salary is clearly right-skewed, with most observations concentrated at lower to mid salary levels and frequencies decreasing as salary increases. A small number of observations extend toward higher values, forming a long right tail.
+
+The distribution of Experience shows that most employees have relatively low to moderate experience, with frequencies gradually decreasing as experience increases, indicating a mildly right-skewed pattern.
+
+In contrast, Age appears to be more symmetrically distributed, with values relatively evenly spread across the range.
 
 
