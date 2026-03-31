@@ -386,3 +386,13 @@ Overall, the findings suggest that the organization’s compensation strategy cl
 
 # \textcolor{blue}{Question 3: Analyzing Categorical Variable Relationships}
 
+## a.1) Relationship between Gender and JobLevel 
+
+```{r}
+# Contingency table between Gender and JobLevel
+tab <- table(data$Gender, data$JobLevel)
+tab
+
+# Display proportions for better interpretation
+prop.table(tab)
+```
