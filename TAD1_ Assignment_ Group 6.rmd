@@ -351,4 +351,11 @@ hist(data$Salary[data$JobLevel=="Senior"],
      xlab="Salary")
 ```
 
+To facilitate comparison between Entry-level and Senior employees, multiple visualisations were constructed.
+
+The boxplot with mean values shows that Senior employees have substantially higher median and mean salaries compared to Entry-level employees. In addition, the spread of salaries is wider for the Senior group, indicating greater variability in compensation at higher job levels.
+
+The histograms further illustrate the distribution of salaries within each group. Entry-level salaries are concentrated within a lower range, while Senior-level salaries are distributed at significantly higher values. There is minimal overlap between the two distributions, suggesting a clear separation between the groups.
+
+Overall, these visualisations reinforce the statistical findings from the hypothesis test and confidence interval, confirming a strong and meaningful difference in salary between Entry-level and Senior employees.
 
