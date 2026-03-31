@@ -1,0 +1,174 @@
+EmployeeID,Department,Age,Gender,JobLevel,EducationLevel,YearsOfExperience,Salary,PerformanceScore,SatisfactionScore,OvertimeHours,TrainingHours,ProjectsCompleted,TeamSize,RemoteWorkDays,AttendanceRate,PromotionCount,OfficeLocation
+EMP_0001,HR,33,Male,Entry,Bachelor,7,36726,4,1,8,60,1,4,3,0.86,2,Remote
+EMP_0002,Engineering,39,Male,Senior,PhD,16,157617,1,2,19,12,11,8,2,0.895,5,New York
+EMP_0003,Finance,27,Other,Mid,High School,2,91316,5,6,18,57,1,3,0,0.916,0,Austin
+EMP_0004,Operations,22,Other,Mid,Bachelor,1,61452,1,1,12,14,1,10,4,0.901,0,Chicago
+EMP_0005,Marketing,35,Female,Mid,PhD,11,73244,3,8,5,16,14,7,1,0.894,3,Chicago
+EMP_0006,Operations,32,Female,Entry,PhD,6,45458,1,5,10,75,19,9,5,0.924,2,San Francisco
+EMP_0007,Marketing,37,Female,Mid,Master,14,90645,3,10,12,28,19,6,5,0.887,4,San Francisco
+EMP_0008,Engineering,25,Male,Entry,Bachelor,1,53795,5,5,19,51,13,9,3,0.895,0,Remote
+EMP_0009,Marketing,51,Female,Senior,PhD,28,166713,2,3,8,40,11,7,4,0.889,5,New York
+EMP_0010,Finance,28,Female,Entry,High School,6,57957,4,4,4,61,4,9,5,0.887,2,Remote
+EMP_0011,Marketing,28,Female,Mid,Bachelor,2,82014,4,4,16,36,1,5,2,0.98,0,New York
+EMP_0012,Engineering,40,Female,Senior,High School,15,152664,3,9,13,91,12,10,5,0.974,5,Chicago
+EMP_0013,Engineering,27,Female,Entry,Master,1,51451,5,9,4,84,10,6,4,0.899,0,San Francisco
+EMP_0014,Marketing,45,Male,Mid,Master,19,106138,4,7,8,65,13,6,1,0.885,5,Chicago
+EMP_0015,HR,38,Male,Mid,PhD,16,98242,4,1,19,17,6,3,3,0.978,5,San Francisco
+EMP_0016,Finance,22,Female,Entry,High School,1,50787,5,6,17,58,10,5,0,0.874,0,Remote
+EMP_0017,Sales,34,Female,Entry,Master,8,61093,3,4,3,3,12,13,4,0.857,2,Chicago
+EMP_0018,Sales,43,Other,Mid,PhD,19,104346,2,7,2,79,17,7,4,0.906,5,Austin
+EMP_0019,Marketing,28,Other,Entry,Master,6,60606,4,5,6,45,19,6,3,0.862,2,New York
+EMP_0020,Engineering,24,Male,Entry,High School,1,65672,1,3,15,40,18,10,1,0.996,0,San Francisco
+EMP_0021,Marketing,26,Male,Entry,PhD,2,56250,4,3,12,49,16,5,5,0.85,0,San Francisco
+EMP_0022,Engineering,29,Male,Mid,Bachelor,3,95418,1,6,15,62,14,12,3,0.959,1,New York
+EMP_0023,Engineering,27,Male,Entry,PhD,4,63942,3,1,10,2,12,8,1,0.929,1,Remote
+EMP_0024,Marketing,37,Male,Mid,PhD,12,74202,3,3,12,94,18,10,5,0.975,4,Austin
+EMP_0025,Finance,39,Female,Senior,Bachelor,13,128193,4,2,1,17,7,9,1,0.971,4,Remote
+EMP_0026,Engineering,37,Male,Entry,PhD,11,81728,5,2,3,26,19,7,1,0.949,3,San Francisco
+EMP_0027,Engineering,33,Male,Mid,Master,11,114455,1,7,7,6,15,10,3,0.877,3,San Francisco
+EMP_0028,Engineering,30,Male,Mid,PhD,8,104874,5,2,11,63,14,6,1,0.877,2,Remote
+EMP_0029,Marketing,44,Female,Senior,High School,19,132915,4,9,19,30,7,11,4,0.94,5,New York
+EMP_0030,Sales,35,Female,Senior,Bachelor,9,124680,4,3,17,95,16,7,3,0.962,3,New York
+EMP_0031,Engineering,34,Female,Entry,Master,10,73732,2,3,2,68,1,11,1,0.865,3,Austin
+EMP_0032,Marketing,22,Female,Entry,Bachelor,1,35875,1,6,10,11,13,9,5,0.94,0,Chicago
+EMP_0033,Marketing,31,Female,Entry,Bachelor,5,53880,4,3,6,84,12,14,1,0.946,1,Chicago
+EMP_0034,HR,36,Male,Mid,PhD,10,72266,5,1,12,34,1,13,0,0.972,3,San Francisco
+EMP_0035,Sales,34,Male,Entry,High School,11,49030,2,5,10,23,5,7,3,0.974,3,Remote
+EMP_0036,Engineering,42,Female,Senior,Master,18,177327,2,2,14,74,10,12,4,0.915,5,Chicago
+EMP_0037,Sales,25,Male,Mid,High School,3,65454,3,10,11,53,3,11,1,0.913,1,Austin
+EMP_0038,Operations,48,Female,Senior,Master,24,144885,3,3,4,96,8,7,5,0.863,5,New York
+EMP_0039,Sales,36,Male,Entry,PhD,11,67491,2,2,11,95,19,4,5,0.853,3,Remote
+EMP_0040,HR,48,Female,Senior,High School,25,135569,2,4,13,73,9,12,0,0.862,5,San Francisco
+EMP_0041,Finance,31,Other,Senior,High School,9,140825,5,4,13,91,11,14,1,0.853,3,New York
+EMP_0042,Sales,28,Female,Entry,Bachelor,6,55071,1,8,17,17,14,12,3,0.929,2,New York
+EMP_0043,Engineering,43,Other,Mid,PhD,19,122348,2,6,15,13,7,4,2,0.881,5,San Francisco
+EMP_0044,Engineering,47,Female,Senior,Bachelor,23,181270,2,10,2,39,1,11,5,0.953,5,Austin
+EMP_0045,Sales,26,Male,Entry,Master,1,46111,5,4,3,17,10,3,1,0.859,0,New York
+EMP_0046,Sales,42,Female,Senior,Master,16,158029,5,2,16,45,2,11,3,0.878,5,Chicago
+EMP_0047,Finance,38,Male,Mid,PhD,12,94584,4,3,19,40,19,14,1,0.921,4,Chicago
+EMP_0048,Marketing,32,Male,Mid,Bachelor,7,78652,1,9,14,73,3,7,2,0.89,2,San Francisco
+EMP_0049,Finance,36,Male,Mid,PhD,12,97022,2,10,11,27,7,10,5,0.927,4,Austin
+EMP_0050,Marketing,28,Male,Entry,PhD,3,28489,1,8,15,52,3,5,2,0.851,1,Remote
+EMP_0051,Engineering,44,Male,Senior,High School,21,173803,2,6,17,44,3,11,1,0.957,5,Remote
+EMP_0052,Engineering,37,Female,Senior,High School,15,152045,4,4,2,25,10,6,1,0.985,5,Austin
+EMP_0053,HR,42,Female,Senior,PhD,20,135990,3,7,10,63,7,12,0,0.956,5,San Francisco
+EMP_0054,Marketing,22,Male,Entry,High School,1,35868,4,7,12,14,4,4,2,0.857,0,New York
+EMP_0055,Engineering,54,Male,Senior,Master,31,211251,2,2,6,86,3,8,1,0.977,5,Austin
+EMP_0056,Marketing,25,Male,Entry,High School,3,51132,5,8,5,64,1,4,0,0.914,1,New York
+EMP_0057,Sales,26,Male,Entry,Master,1,42396,4,3,2,92,10,7,2,0.988,0,Remote
+EMP_0058,Operations,27,Female,Entry,PhD,3,47839,2,5,17,31,5,3,1,0.9,1,Chicago
+EMP_0059,Engineering,45,Male,Senior,PhD,20,177863,3,1,15,82,18,14,4,0.93,5,Austin
+EMP_0060,Marketing,42,Female,Senior,PhD,20,129147,3,1,18,83,9,5,1,0.932,5,Chicago
+EMP_0061,Marketing,38,Male,Mid,Master,14,90259,1,5,16,68,18,12,1,0.897,4,Remote
+EMP_0062,Marketing,48,Male,Senior,High School,26,149386,3,2,1,79,10,12,5,0.974,5,Chicago
+EMP_0063,Engineering,22,Female,Entry,Bachelor,1,54284,1,7,13,40,9,4,1,0.856,0,San Francisco
+EMP_0064,Marketing,29,Male,Entry,PhD,7,49207,3,10,14,39,18,9,0,0.927,2,Austin
+EMP_0065,Marketing,56,Female,Senior,Master,34,173249,5,5,12,3,15,5,1,0.885,5,New York
+EMP_0066,Engineering,37,Female,Senior,Bachelor,14,146594,2,2,19,28,5,12,3,0.995,4,Chicago
+EMP_0067,Sales,30,Male,Entry,High School,8,50459,3,10,7,65,8,12,4,0.894,2,Remote
+EMP_0068,Engineering,47,Female,Mid,Master,22,144806,4,10,3,18,6,13,5,0.982,5,Remote
+EMP_0069,Sales,34,Female,Entry,High School,8,55039,5,9,9,96,11,9,4,0.999,2,Remote
+EMP_0070,Operations,47,Female,Senior,Master,24,137744,1,7,11,59,8,8,3,0.872,5,New York
+EMP_0071,Engineering,42,Female,Senior,High School,19,149888,1,10,4,59,19,12,3,0.941,5,New York
+EMP_0072,Marketing,37,Male,Mid,Bachelor,12,87119,3,10,12,57,2,7,1,0.903,4,San Francisco
+EMP_0073,Engineering,41,Male,Senior,PhD,18,163234,3,3,15,97,2,14,5,0.937,5,Chicago
+EMP_0074,Marketing,26,Other,Entry,High School,4,51916,1,4,0,31,16,3,4,0.925,1,Chicago
+EMP_0075,HR,42,Female,Mid,Bachelor,19,104898,4,9,7,89,5,6,5,0.895,5,Remote
+EMP_0076,Sales,29,Male,Entry,High School,7,43250,5,4,11,89,13,11,3,0.977,2,San Francisco
+EMP_0077,Sales,36,Male,Mid,Bachelor,11,86237,5,3,15,71,14,8,2,0.863,3,Chicago
+EMP_0078,Marketing,31,Male,Entry,High School,5,46389,3,4,15,15,16,11,2,0.918,1,Remote
+EMP_0079,Marketing,22,Male,Entry,Bachelor,1,46802,1,3,16,71,1,7,1,0.929,0,Chicago
+EMP_0080,HR,25,Male,Entry,High School,2,43512,4,8,17,85,17,12,3,0.943,0,Austin
+EMP_0081,HR,26,Female,Mid,High School,1,55861,3,8,18,19,7,7,3,0.906,0,Remote
+EMP_0082,Operations,45,Male,Senior,PhD,21,145814,2,2,14,56,5,11,3,0.931,5,Remote
+EMP_0083,Sales,34,Male,Entry,PhD,9,58303,2,10,13,49,15,8,4,0.913,3,Austin
+EMP_0084,Marketing,59,Male,Executive,Master,35,263312,1,3,17,26,12,13,0,0.94,5,Austin
+EMP_0085,Finance,35,Female,Mid,PhD,10,96027,4,7,15,37,12,12,4,0.906,3,New York
+EMP_0086,Marketing,47,Male,Senior,PhD,21,132833,5,8,14,31,7,9,5,0.87,5,Chicago
+EMP_0087,HR,22,Female,Entry,PhD,1,45474,3,5,3,74,16,6,1,0.868,0,San Francisco
+EMP_0088,Finance,49,Male,Senior,Master,26,175705,3,5,0,44,5,4,5,0.858,5,Chicago
+EMP_0089,Engineering,46,Female,Senior,High School,21,193040,3,8,7,57,16,6,4,0.961,5,Austin
+EMP_0090,Sales,24,Male,Entry,High School,1,39709,5,5,4,91,17,5,5,0.925,0,San Francisco
+EMP_0091,Marketing,25,Female,Entry,Bachelor,3,52794,4,7,4,76,9,13,2,0.856,1,Chicago
+EMP_0092,Engineering,35,Female,Mid,Master,12,104285,1,7,19,43,16,12,1,0.904,4,Chicago
+EMP_0093,Engineering,33,Female,Senior,High School,8,134154,1,1,17,47,8,7,3,0.977,2,San Francisco
+EMP_0094,Sales,36,Male,Entry,PhD,11,58328,2,6,1,63,4,8,5,0.914,3,Austin
+EMP_0095,Marketing,30,Male,Entry,PhD,8,56860,1,1,1,6,11,8,0,0.935,2,Remote
+EMP_0096,HR,44,Female,Mid,PhD,20,88796,3,10,1,91,7,8,0,0.9,5,Remote
+EMP_0097,Operations,23,Male,Mid,High School,1,55739,4,8,8,12,6,7,5,0.882,0,Austin
+EMP_0098,HR,25,Female,Entry,High School,1,47405,2,6,11,68,6,3,4,0.961,0,Remote
+EMP_0099,Engineering,38,Male,Mid,Bachelor,16,115620,2,7,19,52,8,10,2,0.97,5,Remote
+EMP_0100,Finance,37,Female,Mid,Master,13,99533,1,3,11,46,8,5,2,0.921,4,San Francisco
+EMP_0101,Finance,34,Female,Entry,Bachelor,9,56334,4,8,6,54,19,12,2,0.986,3,New York
+EMP_0102,Marketing,41,Male,Senior,Bachelor,19,141313,1,3,15,61,10,8,4,0.936,5,Austin
+EMP_0103,Marketing,22,Female,Entry,High School,1,32981,3,8,18,79,16,5,1,0.924,0,New York
+EMP_0104,Marketing,35,Female,Mid,PhD,11,81189,1,10,14,3,3,3,0,0.876,3,Remote
+EMP_0105,HR,39,Male,Senior,Master,15,106211,5,4,5,4,13,6,1,0.981,5,San Francisco
+EMP_0106,Marketing,33,Female,Mid,PhD,10,78446,5,5,14,2,3,9,4,0.956,3,Austin
+EMP_0107,Engineering,38,Male,Mid,Master,15,116768,1,2,1,76,7,12,0,0.851,5,Chicago
+EMP_0108,Sales,40,Male,Mid,Bachelor,15,100164,3,6,9,69,5,11,3,0.931,5,Remote
+EMP_0109,HR,30,Female,Entry,Bachelor,6,48162,4,3,16,35,6,4,1,0.853,2,San Francisco
+EMP_0110,HR,31,Female,Entry,PhD,8,46063,4,10,5,72,1,7,5,0.944,2,Remote
+EMP_0111,Engineering,22,Other,Entry,High School,1,57084,3,6,15,25,16,9,2,0.865,0,Austin
+EMP_0112,Marketing,34,Male,Mid,PhD,12,77591,5,7,7,36,18,3,1,0.972,4,Austin
+EMP_0113,Engineering,22,Female,Entry,Bachelor,1,45764,5,5,15,17,6,8,5,0.97,0,San Francisco
+EMP_0114,Engineering,42,Female,Senior,Master,20,166313,2,7,7,90,12,5,1,0.952,5,New York
+EMP_0115,Finance,41,Male,Senior,High School,16,151692,3,9,18,10,14,6,3,0.996,5,San Francisco
+EMP_0116,Engineering,39,Male,Mid,Bachelor,13,106578,1,9,7,17,11,6,4,0.981,4,San Francisco
+EMP_0117,Operations,22,Male,Entry,High School,1,30129,4,1,4,40,12,10,3,0.953,0,San Francisco
+EMP_0118,Sales,43,Male,Senior,High School,19,142329,4,5,4,54,1,6,3,0.933,5,Austin
+EMP_0119,Marketing,37,Other,Mid,Master,12,85824,4,4,1,87,11,14,1,0.879,4,New York
+EMP_0120,Engineering,29,Male,Entry,PhD,4,58829,1,3,1,54,15,6,2,0.885,1,Remote
+EMP_0121,Sales,43,Female,Mid,Master,21,104323,3,2,11,11,13,8,1,0.962,5,Remote
+EMP_0122,Marketing,35,Male,Entry,PhD,9,61801,1,1,1,73,7,4,1,0.994,3,Austin
+EMP_0123,Engineering,31,Male,Entry,Bachelor,5,55285,1,4,14,34,13,10,1,0.956,1,New York
+EMP_0124,Finance,53,Female,Senior,Bachelor,27,163721,3,7,2,37,4,9,2,0.9,5,San Francisco
+EMP_0125,Sales,22,Male,Entry,Master,1,40346,5,2,12,37,10,4,3,0.965,0,San Francisco
+EMP_0126,Operations,32,Female,Entry,High School,7,54402,3,9,13,91,18,10,3,0.85,2,San Francisco
+EMP_0127,Marketing,31,Female,Mid,PhD,8,78125,5,10,7,2,12,12,1,0.905,2,New York
+EMP_0128,Marketing,22,Male,Entry,High School,1,43266,3,6,19,76,18,14,4,0.876,0,Chicago
+EMP_0129,HR,36,Female,Senior,High School,11,98840,2,5,9,89,2,12,2,0.881,3,Remote
+EMP_0130,Engineering,51,Male,Senior,Bachelor,29,204962,5,6,0,88,6,11,5,0.876,5,Chicago
+EMP_0131,HR,32,Male,Mid,Master,7,75323,2,7,1,76,1,12,0,0.872,2,Austin
+EMP_0132,Marketing,44,Female,Senior,High School,21,131940,1,3,12,6,7,6,0,0.876,5,Chicago
+EMP_0133,Finance,32,Male,Entry,PhD,10,70020,3,9,11,69,18,9,0,0.901,3,New York
+EMP_0134,Operations,48,Female,Executive,Master,25,237462,4,9,16,16,7,10,1,0.995,5,San Francisco
+EMP_0135,Engineering,33,Female,Entry,Master,8,70980,1,7,18,81,9,12,3,0.855,2,Chicago
+EMP_0136,Sales,22,Male,Entry,Bachelor,1,25692,3,1,10,45,13,3,0,0.914,0,Chicago
+EMP_0137,Operations,36,Other,Entry,PhD,13,56893,1,1,18,35,11,13,4,0.856,4,Remote
+EMP_0138,Engineering,41,Female,Mid,PhD,19,118647,3,7,16,25,3,13,2,0.94,5,Austin
+EMP_0139,HR,30,Male,Entry,Bachelor,5,42408,5,7,13,29,9,12,2,0.999,1,Remote
+EMP_0140,Sales,30,Male,Mid,PhD,5,66629,4,9,9,32,14,10,0,0.959,1,Remote
+EMP_0141,Engineering,27,Female,Entry,High School,1,74227,1,5,15,20,11,3,5,0.879,0,Chicago
+EMP_0142,HR,56,Female,Senior,Master,32,159802,4,3,7,67,17,14,1,0.955,5,San Francisco
+EMP_0143,Sales,29,Female,Entry,PhD,4,40677,5,5,2,61,1,5,2,0.972,1,New York
+EMP_0144,HR,30,Female,Mid,Bachelor,6,72136,1,2,19,88,18,12,4,0.95,2,Remote
+EMP_0145,Engineering,44,Female,Senior,Master,21,178352,5,2,3,84,18,3,4,0.991,5,Austin
+EMP_0146,Engineering,25,Female,Entry,Master,1,74745,3,6,8,44,1,12,1,0.952,0,San Francisco
+EMP_0147,Sales,27,Male,Entry,High School,5,46618,1,1,0,81,4,6,4,0.935,1,Remote
+EMP_0148,Engineering,29,Female,Entry,Master,4,45355,2,9,17,44,4,13,4,0.858,1,Remote
+EMP_0149,HR,35,Male,Mid,Master,9,68750,4,3,19,10,13,12,4,0.909,3,New York
+EMP_0150,HR,47,Male,Senior,Master,21,134505,4,5,5,76,6,12,1,0.88,5,San Francisco
+EMP_0151,Operations,51,Female,Executive,Master,26,239150,2,8,6,42,17,7,0,0.981,5,New York
+EMP_0152,HR,32,Male,Entry,PhD,9,52119,4,8,10,79,17,10,1,0.909,3,Austin
+EMP_0153,Sales,25,Male,Mid,Bachelor,2,68904,2,2,17,23,5,8,1,0.97,0,San Francisco
+EMP_0154,Operations,30,Female,Entry,Master,5,49033,5,9,6,10,1,3,2,0.857,1,San Francisco
+EMP_0155,HR,38,Female,Mid,Bachelor,15,88914,5,5,17,0,14,13,4,0.864,5,Chicago
+EMP_0156,Engineering,42,Female,Senior,Bachelor,17,158141,3,5,19,25,18,9,1,0.972,5,San Francisco
+EMP_0157,Operations,48,Male,Executive,PhD,22,217481,4,4,11,11,5,5,2,0.954,5,Remote
+EMP_0158,Marketing,22,Male,Entry,High School,1,63139,2,9,8,89,10,8,4,0.928,0,Remote
+EMP_0159,Finance,25,Male,Entry,PhD,1,45013,1,10,18,6,14,11,4,0.885,0,San Francisco
+EMP_0160,HR,44,Female,Mid,PhD,22,103417,4,10,11,27,10,13,4,0.987,5,New York
+EMP_0161,Sales,34,Male,Entry,Master,10,52707,2,4,4,22,10,3,3,0.856,3,New York
+EMP_0162,Operations,31,Female,Mid,PhD,6,64666,5,2,16,41,7,9,4,0.909,2,Chicago
+EMP_0163,Finance,46,Other,Senior,PhD,22,143204,3,10,9,86,1,3,0,0.988,5,New York
+EMP_0164,Marketing,32,Female,Mid,Bachelor,9,83833,4,2,1,16,3,13,1,0.958,3,San Francisco
+EMP_0165,Engineering,29,Male,Mid,Master,4,81161,5,4,5,16,4,14,3,0.944,1,San Francisco
+EMP_0166,Engineering,38,Female,Mid,PhD,16,123739,2,6,10,38,3,11,1,0.869,5,San Francisco
+EMP_0167,Marketing,32,Male,Mid,Master,7,72960,2,1,8,56,12,4,5,0.963,2,San Francisco
+EMP_0168,Engineering,27,Male,Entry,High School,5,53232,1,1,4,47,14,12,1,0.93,1,San Francisco
+EMP_0169,Marketing,26,Male,Entry,Bachelor,2,35130,1,8,18,17,3,11,5,0.886,0,San Francisco
+EMP_0170,Finance,33,Female,Mid,Bachelor,9,89658,4,1,8,87,2,7,4,0.892,3,New York
+EMP_0171,Engineering,55,Male,Executive,PhD,30,302678,5,8,0,31,7,9,2,0.948,5,Remote
+EMP_0172,Engineering,39,Male,Mid,Master,16,110178,5,4,9,91,10,6,1,0.93,5,San Francisco
+EMP_0173,Sales,42,Other,Senior,Bachelor,20,149992,1,5,12,1,5,8,2,0.982,5,Austin
