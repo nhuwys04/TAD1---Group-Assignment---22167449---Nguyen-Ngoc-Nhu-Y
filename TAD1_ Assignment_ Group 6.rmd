@@ -131,7 +131,6 @@ In contrast, Experience and Age exhibit more stable and balanced distributions. 
 
 Key numeric variables such as Salary, Experience, and Age were selected as they reflect fundamental workforce characteristics and display clear distributional patterns, making them suitable for analysing trends and relationships within the dataset.
 
-```{r}
 ```{r, fig.width=6, fig.height=10}
 # Histogram
 par(mfrow = c(3,1))
@@ -188,21 +187,25 @@ heatmap(cor_matrix,
         cexRow = 0.8, 
         cexCol = 0.8)
 ```
-A correlation heatmap was first used to provide an overall view of relationships among the numeric variables. 
+
+A correlation heatmap was first used to provide an overall view of relationships among the numeric variables.
 
 The heatmap reveals several strong positive correlations, most notably among Salary, Years of Experience, and Age. These relationships stand out clearly relative to other variable pairs, suggesting that compensation is closely linked to employees’ tenure and age-related factors. In contrast, many other numeric variables, such as TrainingHours, OvertimeHours, exhibit weaker or less consistent correlations, indicating more independent variation.
 
 \newpage
+
 ```{r}
 pairs(data[, c("Salary", "YearsOfExperience", "Age")],
       main = "Pairwise Relationships", 
       pch = 16)
 ```
-Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age. 
+
+Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age.
 
 The pair plots confirm strong positive linear relationships across all three variables. Salary increases steadily with Years of Experience, indicating that employees with more accumulated experience tend to earn substantially higher salaries. A similar upward trend is observed between Salary and Age, while Years of Experience and Age are almost perfectly linearly related. These visual patterns reinforce the correlation results and suggest that these variables capturing employee seniority within the organisation.
 
 \newpage
+
 ```{r}
 boxplot(Salary ~ JobLevel, data=data,
         horizontal=TRUE,
@@ -217,6 +220,7 @@ In addition, Job Level was included to explore how salary varies across differen
 The boxplot reveals clear differences in compensation across job levels. Entry-level employees have lower and less variable salaries, while higher job levels exhibit higher median salaries and greater dispersion, including extreme values. Overall, these patterns suggest that Salary is strongly influenced by experience-related factors and organizational hierarchy.
 
 \newpage
+
 ## e) Summary of workforce characteristics
 
 Overall, this workforce is characterized by a moderately wide age range and varying levels of experience, reflecting a mix of early-career and senior employees. Most employees fall into entry- and mid-level job positions, while senior and executive roles represent a smaller proportion of the organization.
@@ -228,6 +232,7 @@ Exploratory analysis reveals that salary is strongly associated with seniority-r
 In summary, the dataset describes an organization where compensation is primarily driven by experience and job hierarchy, with clear differences across job levels and relatively stable demographic patterns. These findings provide a strong foundation for subsequent inferential analyses focusing on salary comparisons and workforce structure.
 
 \newpage
+
 # \textcolor{blue}{Question 2: Comparing Salary Across Job Levels}
 
 ## a.1) Compare Entry Level vs Senior Level
@@ -236,36 +241,36 @@ In summary, the dataset describes an organization where compensation is primaril
 table(data$JobLevel)
 aggregate(Salary ~ JobLevel, data, mean)
 ```
-Entry and Senior groups were selected to examine differences in mean salary across career stages, because:
 
+Entry and Senior groups were selected to examine differences in mean salary across career stages, because:
 
 Substantial difference in mean salary:
 
-- Entry: 51,436
+-   Entry: 51,436
 
-- Senior: 152,585
+-   Senior: 152,585
 
--> The large difference suggests a strong potential for statistically significant variation between the two groups
+-\> The large difference suggests a strong potential for statistically significant variation between the two groups
 
 Sufficient sample sizes:
 
-- Entry: 70
+-   Entry: 70
 
-- Senior: 44
+-   Senior: 44
 
--> Both groups meet the requirements for reliable two-sample statistical testing
+-\> Both groups meet the requirements for reliable two-sample statistical testing
 
 Moreover, the comparison between Entry and Senior groups is meaningful from an organisational perspective, as it represents early career versus more experienced employees, allowing for an evaluation of how compensation evolves with career progression.
 
 This selection is also consistent with the earlier exploratory analysis, which indicated that salary is strongly associated with experience and job level.
 
-
 ## a.2) Hypotheses testing
+
 The statistical hypotheses are formulated as follows:
 
-- **Null hypothesis ($H₀$):** The mean salary of Entry-level employees is **equal** to that of Senior employees ($μEntry = μSenior$) 
+-   **Null hypothesis (H0):** The mean salary of Entry-level employees is **equal** to that of Senior employees ($μEntry = μSenior$)
 
-- **Alternative hypothesis ($H₁$):** The mean salary of Entry-level employees is **not equal** to that of Senior employees ($μEntry ≠ μSenior$)
+-   **Alternative hypothesis (H1):** The mean salary of Entry-level employees is **not equal** to that of Senior employees ($μEntry ≠ μSenior$)
 
 \newpage
 
@@ -283,9 +288,10 @@ t.test(Salary ~ JobLevel,
 
 **- df = 55.941**
 
-**- p-value < 2.2e - 16**
+**- p-value \< 2.2e - 16**
 
 \newpage
+
 ## c) 84% Confidence interval and Effect size
 
 ```{r}
@@ -295,9 +301,10 @@ t.test(Salary ~ JobLevel,
        var.equal = FALSE,
        conf.level = 0.84)
 ```
+
 Based on the Welch two-sample t-test results from the previous section, an 84% confidence interval for the difference in mean salaries between Entry-level and Senior-level employees was constructed.
 
-**The resulting confidence interval is:  [-106,466.63, -95,830.86]**
+**The resulting confidence interval is: [-106,466.63, -95,830.86]**
 
 This interval does not include zero, indicating that there is a statistically meaningful difference in mean salary between the two groups. Specifically, the negative interval suggests that the mean salary of Entry-level employees is significantly lower than that of Senior employees.
 
@@ -316,6 +323,7 @@ The effect size (Cohen’s d = -6.014) is considered extremely large, far exceed
 This indicates that the difference in salary between Entry-level and Senior employees is substantial, with minimal overlap between the two distributions. In practical terms, this suggests that job level has a very strong impact on employee compensation.
 
 \newpage
+
 ## d) Visual presentations
 
 ```{r}
@@ -334,7 +342,6 @@ means <- tapply(data$Salary[data$JobLevel %in% c("Entry","Senior")],
 
 points(1:2, means, col="red", pch=18, cex=1.5)
 ```
-
 
 ```{r}
 # Histogram
@@ -359,3 +366,18 @@ The histograms further illustrate the distribution of salaries within each group
 
 Overall, these visualisations reinforce the statistical findings from the hypothesis test and confidence interval, confirming a strong and meaningful difference in salary between Entry-level and Senior employees.
 
+\newpage
+
+## d) Conclusion at alpha = 0.02
+
+-   At a significance level of alpha = 0.02, the p-value \< 2.2e - 16, which is much smaller than alpha
+
+**=\> Reject H0**
+
+**=\> There is a statistically significant difference in mean salary between Entry-level and Senior-level employees.**
+
+This conclusion is further supported by the 84% confidence interval for the mean difference, which does not include zero, as well as the very large effect size. These results indicate that the observed salary difference is not only statistically significant but also substantial and consistent in practical terms. The visualizations in part (d) reinforce this finding by showing a clear separation between the salary distributions of the two groups.
+
+From a human resources perspective, a large salary gap between Entry-level and Senior-level employees is expected and appropriate. Senior-level employees typically possess significantly more experience, take on greater responsibilities, and contribute higher strategic value to the organization. As a result, a markedly higher level of compensation reflects a logical and structured pay progression aligned with career advancement.
+
+Overall, the findings suggest that the organization’s compensation strategy clearly reflects job hierarchy and seniority, providing strong financial incentives for employee development and progression. The salary structure appears to be reasonable, transparent, and consistent with standard compensation practices, supporting both organizational effectiveness and long-term workforce motivation.
