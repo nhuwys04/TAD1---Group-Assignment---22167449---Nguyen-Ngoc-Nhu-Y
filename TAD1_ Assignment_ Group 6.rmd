@@ -41,6 +41,18 @@ str(data)
 head(data)
 ```
 
+After loading the dataset, an initial overview was conducted to understand its structure and the types of variables present.
+
+The dataset contains **173 observations and 18 variables**, where each observation represents an individual employee.
+
+The variables in the dataset can be classified into two main types:
+
+-   **Quantitative variables**: Age, YearsOfExperience, Salary, PerformanceScore, SatisfactionScore, OvertimeHours, TrainingHours, ProjectsCompleted, TeamSize, RemoteWorkDays, AttendanceRate, and PromotionCount. (these variables are numerical and suitable for statistical analysis)
+
+-   **Qualitative variables:** EmployeeID, Department, Gender, JobLevel, EducationLevel, and OfficeLocation (these variables represent categories or labels)
+
+Each row in the dataset represents an individual employee, while each column corresponds to a specific attribute describing that employee. This structure allows for analysis of workforce characteristics, including performance, compensation, and workplace behaviour.
+
 
 
 
