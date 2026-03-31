@@ -177,4 +177,18 @@ In addition, Experience and Age exhibit an extremely strong positive correlation
 
 ## d) Pattern and relationships in the data
 
+```{r}
+numeric_vars <- data[, sapply(data, is.numeric)]
+cor_matrix <- cor(numeric_vars)
+
+heatmap(cor_matrix, 
+        margins = c(8, 8),
+        cexRow = 0.8, 
+        cexCol = 0.8)
+```
+A correlation heatmap was first used to provide an overall view of relationships among the numeric variables. 
+
+The heatmap reveals several strong positive correlations, most notably among Salary, Years of Experience, and Age. These relationships stand out clearly relative to other variable pairs, suggesting that compensation is closely linked to employees’ tenure and age-related factors. In contrast, many other numeric variables, such as TrainingHours, OvertimeHours, exhibit weaker or less consistent correlations, indicating more independent variation.
+
+
 
