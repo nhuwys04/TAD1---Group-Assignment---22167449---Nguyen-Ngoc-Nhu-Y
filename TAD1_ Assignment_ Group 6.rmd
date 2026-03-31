@@ -63,5 +63,33 @@ summary(data[, numeric_vars])
 sapply(data[, numeric_vars], sd)
 ```
 
+\newpage
+
+From the output, **Salary shows the strongest evidence of potential outliers:**
+
+-   Q1: 54,284
+
+-   Median: 78,652
+
+-   Q3: 132,833
+
+-   Max: 302,678
+
+-   Mean: 95,076
+
+-   Upper bound = Q3 + 1.5 × IQR = 250,656 (*Using the 1.5×IQR rule, IQR = Q3 − Q1 = 78,549)*
+
+**Since:**
+
+-   **Max: 302,678 \> Upper bound: 250,656**
+
+**-\> this provides clear evidence of the presence of outliers in Salary.**
+
+-   **Mean: 95,076 \> Median: 78,652,**
+
+**-\> further indicating a right-skewed distribution, which is consistent with the presence of high-value outliers.**
+
+Other numeric variables were also examined using the same approach, and no significant outliers were detected based on the IQR rule. Detailed calculations are provided in the Appendix A.
+
 
 
