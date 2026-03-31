@@ -1,0 +1,15 @@
+---
+title: "TAD Assignment_ Group 6"
+author: "NGUYEN Ngoc Nhu Y (22167449)"
+date: "2026-03-30"
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
