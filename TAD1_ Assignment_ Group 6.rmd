@@ -198,5 +198,18 @@ pairs(data[, c("Salary", "YearsOfExperience", "Age")],
 ```
 Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age. The pair plots confirm strong positive linear relationships across all three variables. Salary increases steadily with Years of Experience, indicating that employees with more accumulated experience tend to earn substantially higher salaries. A similar upward trend is observed between Salary and Age, while Years of Experience and Age are almost perfectly linearly related. These visual patterns reinforce the correlation results and suggest that these variables capturing employee seniority within the organisation.
 
+\newpage
+```{r}
+boxplot(Salary ~ JobLevel, data=data,
+        horizontal=TRUE,
+        main="Salary by Job Level",
+        xlab="Job Level",
+        ylab="Salary",
+        pch=16)
+```
+
+In addition, Job Level was included to explore how salary varies across different employee groups, providing further insight into organisational structure and compensation patterns.
+
+The boxplot reveals clear differences in compensation across job levels. Entry-level employees have lower and less variable salaries, while higher job levels exhibit higher median salaries and greater dispersion, including extreme values. Overall, these patterns suggest that Salary is strongly influenced by experience-related factors and organizational hierarchy.
 
 
