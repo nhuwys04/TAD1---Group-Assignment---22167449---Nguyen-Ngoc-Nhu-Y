@@ -190,5 +190,13 @@ A correlation heatmap was first used to provide an overall view of relationships
 
 The heatmap reveals several strong positive correlations, most notably among Salary, Years of Experience, and Age. These relationships stand out clearly relative to other variable pairs, suggesting that compensation is closely linked to employees’ tenure and age-related factors. In contrast, many other numeric variables, such as TrainingHours, OvertimeHours, exhibit weaker or less consistent correlations, indicating more independent variation.
 
+\newpage
+```{r}
+pairs(data[, c("Salary", "YearsOfExperience", "Age")],
+      main = "Pairwise Relationships", 
+      pch = 16)
+```
+Guided by the overall patterns, further exploration was conducted using pairwise scatter plots focusing on Salary, Years of Experience, and Age. The pair plots confirm strong positive linear relationships across all three variables. Salary increases steadily with Years of Experience, indicating that employees with more accumulated experience tend to earn substantially higher salaries. A similar upward trend is observed between Salary and Age, while Years of Experience and Age are almost perfectly linearly related. These visual patterns reinforce the correlation results and suggest that these variables capturing employee seniority within the organisation.
+
 
 
