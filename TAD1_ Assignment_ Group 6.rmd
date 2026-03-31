@@ -277,16 +277,16 @@ t.test(Salary ~ JobLevel,
        var.equal = FALSE)
 ```
 
-Results:
+**Results:**
 
-- t = -27.085
+**- t = -27.085**
 
-- df = 55.941
+**- df = 55.941**
 
-- p-value < 2.2 × $10⁻¹⁶$
+**- p-value < 2.2e - 16**
 
 \newpage
-## c) 84% Confidence interval and effect size
+## c) 84% Confidence interval and Effect size
 
 ```{r}
 # 84% Confident interval
@@ -314,3 +314,25 @@ cohen.d(Salary ~ JobLevel,
 The effect size (Cohen’s d = -6.014) is considered extremely large, far exceeding the conventional threshold for a large effect (d = 0.8).
 
 This indicates that the difference in salary between Entry-level and Senior employees is substantial, with minimal overlap between the two distributions. In practical terms, this suggests that job level has a very strong impact on employee compensation.
+
+\newpage
+## d) Visual presentations
+
+```{r}
+# Boxplot
+boxplot(Salary ~ JobLevel,
+        data = subset(data, JobLevel %in% c("Entry","Senior")),
+        col = c("orange","purple"),
+        main = "Salary Comparison: Entry vs Senior",
+        ylab = "Salary",
+        pch = 16)
+
+## add mean
+means <- tapply(data$Salary[data$JobLevel %in% c("Entry","Senior")],
+                data$JobLevel[data$JobLevel %in% c("Entry","Senior")],
+                mean)
+
+points(1:2, means, col="red", pch=18, cex=1.5)
+```
+
+
