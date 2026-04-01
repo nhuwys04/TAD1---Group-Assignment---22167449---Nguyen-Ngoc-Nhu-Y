@@ -440,7 +440,6 @@ chi_test
 
 *\*The **theoretical degrees of freedom** for the contingency table **is (3−1)(4−1) = 6**; however, inference is based on a simulated p-value, and therefore df is not used in determining statistical significance.*
 
-\newpage
 ## c) Visualizations
 
 ```{r}
@@ -460,5 +459,18 @@ The stacked bar chart shows the distribution of gender across different job leve
 
 Overall, the proportions of Male and Female employees remain relatively consistent across Entry, Mid, and Senior levels. There is no clear shift in gender composition as job level increases. Although slight variations are observed, such as a marginally higher proportion of females in Senior roles, these differences are not substantial. The Executive level contains very few observations, making it difficult to draw meaningful conclusions for this category.
 
-Overall, the visualisation does not suggest a strong association between Gender and JobLevel, which is consistent with the results of the chi-square test.
+Overall, the visualization does not suggest a strong association between Gender and Job Level, which is consistent with the results of the chi-square test.
 
+## d) Conclusion at alpha = 0.02
+
+At a significance level of alpha = 0.02, the p-value (0.3493) is greater than alpha (0.3493 \> 0.02).
+
+**=\> Fail to reject H0**
+
+**=\> There is no statistically significant association between Gender and Job Level.**
+
+This result suggests that the distribution of employees across job levels does not differ meaningfully by gender. In other words, gender does not appear to influence the likelihood of being in a particular job level within the organisation.
+
+This finding is consistent with the visualizations in part c), which showed relatively similar gender proportions across Entry, Mid, and Senior levels, with no clear pattern of imbalance.
+
+From an organisational perspective, this indicates a relatively balanced workforce structure in terms of gender representation across job levels. There is no strong evidence of gender-based disparities in job level distribution, suggesting that opportunities for advancement may be relatively equitable across genders.
