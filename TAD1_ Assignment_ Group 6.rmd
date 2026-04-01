@@ -439,3 +439,26 @@ chi_test
 -   **df = NA**
 
 *\*The **theoretical degrees of freedom** for the contingency table **is (3−1)(4−1) = 6**; however, inference is based on a simulated p-value, and therefore df is not used in determining statistical significance.*
+
+\newpage
+## c) Visualizations
+
+```{r}
+barplot(cont_tab,
+        col = c("#FFDA89", "#CCCCFF", "#EE6363"),
+        main = "Gender Distribution Across Job Levels",
+        xlab = "Job Level",
+        ylab = "Count")
+
+legend("topright",
+       legend = rownames(cont_tab),
+       fill = c("#FFDA89", "#CCCCFF", "#EE6363"),
+       bty = "n")
+```
+
+The stacked bar chart shows the distribution of gender across different job levels.
+
+Overall, the proportions of Male and Female employees remain relatively consistent across Entry, Mid, and Senior levels. There is no clear shift in gender composition as job level increases. Although slight variations are observed, such as a marginally higher proportion of females in Senior roles, these differences are not substantial. The Executive level contains very few observations, making it difficult to draw meaningful conclusions for this category.
+
+Overall, the visualisation does not suggest a strong association between Gender and JobLevel, which is consistent with the results of the chi-square test.
+
