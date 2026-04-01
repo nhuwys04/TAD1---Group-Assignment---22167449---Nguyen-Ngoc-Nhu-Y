@@ -421,3 +421,21 @@ The assumptions of the chi-square test were examined prior to conducting the tes
 The expected frequencies were calculated, and some cells were found to have expected counts less than 5. This violates the assumption required for the chi-square approximation to be valid.
 
 Therefore, a **Pearson’s chi-square test with a simulated p-value** was used to obtain a more reliable result.
+
+### Chi-squared test
+
+```{r}
+# Chi-squared test
+chi_test <- chisq.test(cont_tab, simulate.p.value = TRUE)
+chi_test
+```
+
+### Results
+
+-   **X-squared = 6.563**
+
+-   **p-value = 0.3493**
+
+-   **df = NA**
+
+*\*The **theoretical degrees of freedom** for the contingency table **is (3−1)(4−1) = 6**; however, inference is based on a simulated p-value, and therefore df is not used in determining statistical significance.*
