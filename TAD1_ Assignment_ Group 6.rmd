@@ -506,7 +506,32 @@ Overall, both coefficients align with standard compensation practices, where sal
 
 ### Slope (b1 = 5,349.8)
 
-The slope coefficient of the regression model is estimated at 5,349.8, indicating that, on average, an employee’s salary is expected to increase by approximately $5,350 for each additional year of experience, holding all else constant. In the context of HR compensation, this result suggests a strong and positive relationship between work experience and salary, reflecting a pay structure where employees are rewarded for accumulated skills, expertise, and tenure within the organization.
+The slope coefficient of the regression model is estimated at 5,349.8, indicating that, on average, an employee’s salary is expected to increase by approximately \$5,350 for each additional year of experience, holding all else constant. In the context of HR compensation, this result suggests a strong and positive relationship between work experience and salary, reflecting a pay structure where employees are rewarded for accumulated skills, expertise, and tenure within the organization.
 
 ### Intercept (b0 = 34,806.1)
+
 The intercept of the model is estimated at 34,806.1, which represents the predicted salary for an employee with zero years of experience. While this value may not correspond to a realistic salary level in practice, since employees typically enter the workforce with some form of experience, it serves as a baseline reference point for the linear regression model. The intercept helps define the starting point of the salary and experience relationship but should not be interpreted as an actual entry-level wage.
+
+## c) Hypothesis testing on the slope
+
+### Hypotheses
+
+-   **Null Hypothesis (H0):** Years of Experience has **no effect** on Salary (b1 = 0)
+
+-   **Alternative Hypothesis (H1):** Years of Experience **has a significant effect** on Salary (b1 $≠$ 0)
+
+### Test results
+
+From the regression output:
+
+-   t- value = 22.92
+
+-   p-value \< 2.2e-16
+
+### Test conclusion
+
+-   At a significance level of alpha = 0.05, the p-value \< 2.2e - 16, which is much smaller than alpha
+
+**=\> Reject H0**
+
+**=\> There is strong statistical evidence that Years of Experience has a significant linear relationship with Salary.**
