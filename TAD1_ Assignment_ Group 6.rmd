@@ -477,3 +477,27 @@ From an organisational perspective, this indicates a relatively balanced workfor
 
 # \textcolor{blue}{Question 4: Simple Linear Regression - Predicting Salary From Years Of Experience}
 
+## a) Simple linear regression model
+
+```{r}
+model <- lm(Salary ~ YearsOfExperience, data = data)
+summary(model)
+```
+
+From the linear regression output the estimated coefficients are:
+
+-   Intercept (b0) = 34,806.1
+
+-   Slope (b1) = 5,349.8
+
+Equation:
+
+-   $\hat{y} = b0 + b1x$
+
+Therefore, the estimated regression equation is:
+
+-   $\hat{y} =34,806.1 + 5,349.8x$
+
+-   $\hat{Salary}$ = 34,806.1 + 5,349.8 x YearsOfExperience
+
+
