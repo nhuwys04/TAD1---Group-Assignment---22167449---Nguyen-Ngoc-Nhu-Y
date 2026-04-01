@@ -414,3 +414,10 @@ test <- chisq.test(cont_tab)
 test$expected
 ```
 
+### Assumption
+
+The assumptions of the chi-square test were examined prior to conducting the test.
+
+The expected frequencies were calculated, and some cells were found to have expected counts less than 5. This violates the assumption required for the chi-square approximation to be valid.
+
+Therefore, a **Pearson’s chi-square test with a simulated p-value** was used to obtain a more reliable result.
