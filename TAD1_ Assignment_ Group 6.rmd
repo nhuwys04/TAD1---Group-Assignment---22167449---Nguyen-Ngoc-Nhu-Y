@@ -474,3 +474,6 @@ This result suggests that the distribution of employees across job levels does n
 This finding is consistent with the visualizations in part c), which showed relatively similar gender proportions across Entry, Mid, and Senior levels, with no clear pattern of imbalance.
 
 From an organisational perspective, this indicates a relatively balanced workforce structure in terms of gender representation across job levels. There is no strong evidence of gender-based disparities in job level distribution, suggesting that opportunities for advancement may be relatively equitable across genders.
+
+# \textcolor{blue}{Question 4: Simple Linear Regression - Predicting Salary From Years Of Experience}
+
