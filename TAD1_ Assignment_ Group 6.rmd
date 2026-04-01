@@ -552,7 +552,7 @@ In other words, years of experience is a strong predictor of salary, accounting 
 
 Overall, this suggests that while experience plays a major role in determining salary, it is not the only factor affecting compensation.
 
-## e.1) Predict the salary for an employee with 5 years of experience.
+## e.1) Predict the salary for an employee with 5 years of experience
 
 ```{r}
 predict(model, newdata = data.frame(YearsOfExperience = 5))
@@ -560,6 +560,14 @@ predict(model, newdata = data.frame(YearsOfExperience = 5))
 
 -   The predicted value is: 61,554.94
 
-This means that an employee with 5 years of experience is expected to earn around \$ 61,555, based on the fitted linear relationship between experience and salary.
+This means that an employee with 5 years of experience is expected to earn around \$61,555, based on the fitted linear relationship between experience and salary.
 
 From a compensation perspective, this result highlights the role of experience in determining salary levels. The model suggests a structured pay progression, where employees are rewarded consistently as they gain experience. However, since not all variation in salary is explained by experience, other factors such as job level and performance should also be considered in compensation decisions.
+
+## e.2) Practical implications for compensation strategy
+
+**Experience-based compensation structure:** The model indicates that salary increases consistently with years of experience, suggesting a structured and predictable compensation system aligned with employee tenure.
+
+**Support for career progression:** The positive relationship between experience and salary provides clear financial incentives for employees to remain with the organization and develop their skills over time.
+
+**Recommendation for HR planning:** The organization may benefit from incorporating additional factors such as performance, job level, and education into its compensation model to ensure a more comprehensive and equitable pay structure.
