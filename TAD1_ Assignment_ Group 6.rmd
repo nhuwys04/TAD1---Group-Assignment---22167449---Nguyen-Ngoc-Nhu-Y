@@ -500,6 +500,8 @@ Therefore, the estimated regression equation is:
 
 -   $\hat{Salary}$ = 34,806.1 + 5,349.8 x Years Of Experience
 
+\newpage
+
 ## b) Interpretation of slope and intercept
 
 Overall, both coefficients align with standard compensation practices, where salary growth is systematically tied to increasing experience.
@@ -522,9 +524,9 @@ The intercept of the model is estimated at 34,806.1, which represents the predic
 
 ### Test results
 
-From the regression output:
+From the regression output in part a):
 
--   t- value = 22.92
+-   t-value = 22.92
 
 -   p-value \< 2.2e-16
 
@@ -535,3 +537,18 @@ From the regression output:
 **=\> Reject H0**
 
 **=\> There is strong statistical evidence that Years of Experience has a significant linear relationship with Salary.**
+
+\newpage
+
+## d) R-squared
+
+From the regression output in part a):
+
+-   R-squared = 0.7544
+
+This indicates that 75.44% of the variation in Salary can be explained by Years Of Experience.
+
+In other words, years of experience is a strong predictor of salary, accounting for a substantial proportion of the variability in employee compensation. However, the remaining 24.56% of variation is likely influenced by other factors.
+
+Overall, this suggests that while experience plays a major role in determining salary, it is not the only factor affecting compensation.
+
