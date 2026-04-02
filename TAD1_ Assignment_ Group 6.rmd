@@ -603,3 +603,25 @@ Overall, the visualisation suggests that performance scores are relatively simil
 -   **Null Hypothesis (H0):** Mean Performance Score is the same across all Job Levels
 
 -   **Alternative Hypothesis (H1):** At least one Job Level has a different mean Performance Score
+
+## b.2) ANOVA
+
+```{r}
+anova_model <- aov(PerformanceScore ~ JobLevel, data = data)
+summary(anova_model)
+```
+### Results
+
+From the ANOVA output:
+
+-   F-statistic = 0.253
+
+-   p-value = 0.859
+
+### Conclusion
+
+At a significance level of alpha = 0.05, the p-value (0.859) is greater than alpha.
+
+=> Fail to reject the Null Hypothesis
+
+=> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
