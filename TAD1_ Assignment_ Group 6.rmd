@@ -596,4 +596,10 @@ While the Entry level appears to have slightly greater variability, the overall 
 
 Overall, the visualisation suggests that performance scores are relatively similar across job levels, with no clear pattern of variation.
 
+\newpage
 
+## b.1) Hypotheses Testing
+
+-   **Null Hypothesis (H0):** Mean Performance Score is the same across all Job Levels
+
+-   **Alternative Hypothesis (H1):** At least one Job Level has a different mean Performance Score
