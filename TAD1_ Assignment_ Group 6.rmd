@@ -625,3 +625,16 @@ At a significance level of alpha = 0.05, the p-value (0.859) is greater than alp
 => Fail to reject the Null Hypothesis
 
 => This indicates that there is no statistically significant difference in mean Performance Score across job levels.
+
+## c) Overall ANOVA test result is not statistically significant
+
+In this case, the overall one‑way ANOVA result is not statistically significant (p‑value = 0.859 > alpha). This indicates that there is insufficient statistical evidence to conclude that mean Performance Scores differ across Job Levels.
+
+```{r}
+# Further support statement
+aggregate(PerformanceScore ~ JobLevel, data, mean)
+```
+
+This conclusion is further supported by the descriptive statistics. The mean Performance Scores across Job Levels are relatively similar: Entry (2.91), Mid (3.11), Senior (2.93), and Executive (3.20). The observed differences in means are small, suggesting that any variation in Performance Scores across Job Levels is likely due to random variation rather than systematic differences between groups.
+
+As a result, there is no strong justification for conducting post‑hoc pairwise comparisons, since post‑hoc tests are designed to identify specific group differences only when the overall ANOVA is statistically significant.
