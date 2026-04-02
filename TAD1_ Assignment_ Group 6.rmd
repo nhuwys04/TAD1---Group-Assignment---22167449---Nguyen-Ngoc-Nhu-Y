@@ -649,3 +649,17 @@ The R code for Tukey’s HSD post‑hoc test is as follows:
 TukeyHSD(anova_model)
 ```
 
+# d) Interpretations of findings
+
+At a significance level of alpha = 0.05, the p-value (0.859) is greater than alpha.
+
+=> Fail to reject the Null Hypothesis
+
+=> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
+
+From an organizational perspective, this suggests that employee performance is relatively consistent across different job levels. In other words, higher job levels do not necessarily correspond to higher performance scores.
+
+This may indicate that the organization applies a standardized performance evaluation system, where employees are assessed using similar criteria regardless of their job level. It also suggests that promotion to higher job levels may be influenced more by factors such as experience, tenure, or role responsibilities rather than differences in measured performance.
+
+Overall, the findings imply that while job level strongly influences compensation (as seen in earlier analyses), it does not appear to significantly differentiate employee performance. This reflects a structured organization where performance expectations are relatively uniform across different levels.
+
