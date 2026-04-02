@@ -330,7 +330,7 @@ This indicates that the difference in salary between Entry-level and Senior empl
 # Boxplot
 boxplot(Salary ~ JobLevel,
         data = subset(data, JobLevel %in% c("Entry","Senior")),
-        col = c("orange","purple"),
+        col = c("#FCD9C4", "#F19373"),
         main = "Salary Comparison: Entry vs Senior",
         ylab = "Salary",
         pch = 16)
@@ -348,12 +348,12 @@ points(1:2, means, col="red", pch=18, cex=1.5)
 par(mfrow = c(1,2))
 
 hist(data$Salary[data$JobLevel=="Entry"],
-     col="orange",
+     col="#FCD9C4",
      main="Salary of Entry Group",
      xlab="Salary")
 
 hist(data$Salary[data$JobLevel=="Senior"],
-     col="purple",
+     col="#F19373",
      main="Salary of Senior Group",
      xlab="Salary")
 ```
@@ -571,3 +571,27 @@ From a compensation perspective, this result highlights the role of experience i
 **Support for career progression:** The positive relationship between experience and salary provides clear financial incentives for employees to remain with the organization and develop their skills over time.
 
 **Recommendation for HR planning:** The organization may benefit from incorporating additional factors such as performance, job level, and education into its compensation model to ensure a more comprehensive and equitable pay structure.
+
+\newpage
+
+# \textcolor{blue}{Question 5: Comparing Performance Score Across Job Levels}
+
+## a) Boxplot
+
+```{r}
+boxplot(PerformanceScore ~ JobLevel,
+        data = data,
+        col = c("#C9E4D6", "#67BF7F", "#00A06B", "#00676B"),
+        main = "Performance Score by Job Level",
+        xlab = "Job Level",
+        ylab = "Performance Score",
+        pch = 16)
+```
+
+A boxplot was constructed to visualise the distribution of Performance Score across different Job Levels.
+
+The boxplot shows that the median performance score is approximately 3 for all job levels, indicating a consistent central tendency across groups. The interquartile ranges are also similar, with most scores falling between 2 and 4.
+
+While the Entry level appears to have slightly greater variability, the overall spread of performance scores is comparable across all job levels. No substantial differences in distribution or central tendency are observed.
+
+Overall, the visualisation suggests that performance scores are relatively similar across job levels, with no clear pattern of variation.
