@@ -635,6 +635,17 @@ In this case, the overall one‑way ANOVA result is not statistically significan
 aggregate(PerformanceScore ~ JobLevel, data, mean)
 ```
 
-This conclusion is further supported by the descriptive statistics. The mean Performance Scores across Job Levels are relatively similar: Entry (2.91), Mid (3.11), Senior (2.93), and Executive (3.20). The observed differences in means are small, suggesting that any variation in Performance Scores across Job Levels is likely due to random variation rather than systematic differences between groups.
+This conclusion is further supported by the descriptive statistics. The mean Performance Scores across Job Levels are relatively similar: Entry (2.91), Executive (3.20), Mid (3.11), and Senior (2.93). The observed differences in means are small, suggesting that any variation in Performance Scores across Job Levels is likely due to random variation rather than systematic differences between groups.
 
 As a result, there is no strong justification for conducting post‑hoc pairwise comparisons, since post‑hoc tests are designed to identify specific group differences only when the overall ANOVA is statistically significant.
+
+**\*Suppose the overall test result is significant**
+
+Theoretically, ANOVA only answers a general question, whether there is at least one difference in mean Performance Scores across Job Levels, but it does not identify which specific job level pairs differ. Therefore, when the ANOVA result is statistically significant (p‑value \< 0.05), a post‑hoc test such as Tukey’s HSD is required to conduct pairwise comparisons while controlling for multiple testing errors.
+
+The R code for Tukey’s HSD post‑hoc test is as follows:
+
+```{r, eval = FALSE}
+TukeyHSD(anova_model)
+```
+
