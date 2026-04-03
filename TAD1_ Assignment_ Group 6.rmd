@@ -1,4 +1,6 @@
 ---
+title: "TAD1_ Group Assignment_ Group 6"
+author: "NGUYEN Ngoc Nhu Y"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -7,40 +9,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-\begin{titlepage}
-\centering
-
-\vspace*{3cm}
-
-{\Large \textbf{HR Analytics Assignment - Group 6} \par}
-\vspace{0.5cm}
-{\large \textbf{Course: Thinking About Data (TAD T225)} \par}
-\vspace{0.5cm}
-{\large \textbf{Due Date: 2026/04/03} \par}
-
-\vspace{2cm}
-
-{\large \textbf{Name: Nguyen Ngoc Nhu Y} \par}
-\vspace{0.3cm}
-{\large \textbf{Student ID: 22167449} \par}
-\vspace{0.3cm}
-{\large \textbf{Western Sydney University} \par}
-
-\vspace{1.5cm}
-
-{\large \textbf{Lecturer: Dr. Nguyen Phuc Son} \par}
-
-\vspace{1.5cm}
-
-{\large \textbf{Repository Link:} \par}
-\vspace{0.3cm}
-\url{https://github.com/nhuwys/AP1_Assignment-3_22167449_NGUYEN-Ngoc-Nhu-Y}
-
-
-\end{titlepage}
-
-\newpage
 
 # DATASET INFORMATION
 
