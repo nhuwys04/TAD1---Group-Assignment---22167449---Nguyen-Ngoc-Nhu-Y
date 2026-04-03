@@ -1,7 +1,4 @@
 ---
-title: "TAD Assignment_ Group 6"
-author: "NGUYEN Ngoc Nhu Y (22167449)"
-date: "2026-03-30"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -10,6 +7,40 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+\begin{titlepage}
+\centering
+
+\vspace*{3cm}
+
+{\Large \textbf{HR Analytics Assignment - Group 6} \par}
+\vspace{0.5cm}
+{\large \textbf{Course: Thinking About Data (TAD T225)} \par}
+\vspace{0.5cm}
+{\large \textbf{Due Date: 2026/04/03} \par}
+
+\vspace{2cm}
+
+{\large \textbf{Name: Nguyen Ngoc Nhu Y} \par}
+\vspace{0.3cm}
+{\large \textbf{Student ID: 22167449} \par}
+\vspace{0.3cm}
+{\large \textbf{Western Sydney University} \par}
+
+\vspace{1.5cm}
+
+{\large \textbf{Lecturer: Dr. Nguyen Phuc Son} \par}
+
+\vspace{1.5cm}
+
+{\large \textbf{Repository Link:} \par}
+\vspace{0.3cm}
+\url{https://github.com/nhuwys/AP1_Assignment-3_22167449_NGUYEN-Ngoc-Nhu-Y}
+
+
+\end{titlepage}
+
+\newpage
 
 # DATASET INFORMATION
 
@@ -53,10 +84,12 @@ The variables in the dataset can be classified into two main types:
 
 Each row in the dataset represents an individual employee, while each column corresponds to a specific attribute describing that employee. This structure allows for analysis of workforce characteristics, including performance, compensation, and workplace behaviour.
 
-## b) Compute and present summary statistics
+\newpage
+
+## b.1) Compute and present summary statistics
 
 ```{r}
-# summary statistics for all numeric variables in the dataset
+# Summary statistics for all numeric variables in the dataset
 numeric_vars <- sapply(data, is.numeric)
 
 summary(data[, numeric_vars])
@@ -91,9 +124,15 @@ From the output, **Salary shows the strongest evidence of potential outliers:**
 
 Other numeric variables were also examined using the same approach, and no significant outliers were detected based on the IQR rule. Detailed calculations are provided in the Appendix A.
 
+## b.2) Visualizations
+
 ```{r}
-#Visualizations
-hist(data$Salary, breaks=20, col="lightblue", main ="", xlab="Salary")
+# Visualize the distribution of Salary to assess skewness and identify potential outliers
+hist(data$Salary, 
+     breaks=20, 
+     col="lightblue", 
+     main ="", 
+     xlab="Salary")
 ```
 
 The histogram of Salary shows a clearly right-skewed distribution.
@@ -103,6 +142,7 @@ Most observations are concentrated on the lower end of the scale, approximately 
 This indicates a non-symmetric distribution, where most employees earn lower to mid-range salaries, while a small number receive substantially higher salaries.
 
 ```{r}
+# Compare key numeric variables (Salary, Experience, Age)
 par(mfrow = c(1, 3))
 
 boxplot(data$Salary,
@@ -127,12 +167,11 @@ Among the three variables, Salary shows the clearest evidence of unusual observa
 
 In contrast, Experience and Age exhibit more stable and balanced distributions. The boxes (IQRs) are relatively symmetric, with the median located near the center, and all observations fall within the whiskers. No points extend beyond the whiskers.
 
-## c) Key numeric variables
+## c) Histogram for numeric variables
 
 Key numeric variables such as Salary, Experience, and Age were selected as they reflect fundamental workforce characteristics and display clear distributional patterns, making them suitable for analysing trends and relationships within the dataset.
 
-```{r, fig.width=6, fig.height=10}
-# Histogram
+```{r, fig.width=6, fig.height=7.2}
 par(mfrow = c(3,1))
 
 hist(data$Salary,
@@ -179,6 +218,7 @@ In addition, Experience and Age exhibit an extremely strong positive correlation
 ## d) Pattern and relationships in the data
 
 ```{r}
+# Heatmap: Big picture of relationships among numeric variables
 numeric_vars <- data[, sapply(data, is.numeric)]
 cor_matrix <- cor(numeric_vars)
 
@@ -195,6 +235,7 @@ The heatmap reveals several strong positive correlations, most notably among Sal
 \newpage
 
 ```{r}
+# Pair plot: Deep dive into key variables (Salary, Experience, Age)
 pairs(data[, c("Salary", "YearsOfExperience", "Age")],
       main = "Pairwise Relationships", 
       pch = 16)
@@ -207,6 +248,7 @@ The pair plots confirm strong positive linear relationships across all three var
 \newpage
 
 ```{r}
+# Boxplot: Compare Salary across Job Levels to examine group differences
 boxplot(Salary ~ JobLevel, data=data,
         horizontal=TRUE,
         main="Salary by Job Level",
@@ -276,6 +318,8 @@ The statistical hypotheses are formulated as follows:
 
 ## b) Welch two sample t-test
 
+Given the strong right-skewness and unequal variances observed in salary distributions, the Welch two sample t-test was chosen as it does not assume equal variances between groups.
+
 ```{r}
 t.test(Salary ~ JobLevel, 
        data = subset(data, JobLevel %in% c("Entry", "Senior")), 
@@ -330,12 +374,12 @@ This indicates that the difference in salary between Entry-level and Senior empl
 # Boxplot
 boxplot(Salary ~ JobLevel,
         data = subset(data, JobLevel %in% c("Entry","Senior")),
-        col = c("#FCD9C4", "#F19373"),
+        col = c("#C9B5D4", "#635BA2"),
         main = "Salary Comparison: Entry vs Senior",
         ylab = "Salary",
         pch = 16)
 
-## add mean
+# add mean
 means <- tapply(data$Salary[data$JobLevel %in% c("Entry","Senior")],
                 data$JobLevel[data$JobLevel %in% c("Entry","Senior")],
                 mean)
@@ -348,12 +392,12 @@ points(1:2, means, col="red", pch=18, cex=1.5)
 par(mfrow = c(1,2))
 
 hist(data$Salary[data$JobLevel=="Entry"],
-     col="#FCD9C4",
+     col="#C9B5D4",
      main="Salary of Entry Group",
      xlab="Salary")
 
 hist(data$Salary[data$JobLevel=="Senior"],
-     col="#F19373",
+     col="#635BA2",
      main="Salary of Senior Group",
      xlab="Salary")
 ```
@@ -376,7 +420,7 @@ Overall, these visualizations reinforce the statistical findings from the hypoth
 
 **=\> There is a statistically significant difference in mean salary between Entry-level and Senior-level employees.**
 
-This conclusion is further supported by the 84% confidence interval for the mean difference, which does not include zero, as well as the very large effect size. These results indicate that the observed salary difference is not only statistically significant but also substantial and consistent in practical terms. The visualizations in part (d) reinforce this finding by showing a clear separation between the salary distributions of the two groups.
+This conclusion is further supported by the 84% confidence interval for the mean difference, which does not include zero, as well as the very large effect size. These results indicate that the observed salary difference is not only statistically significant but also substantial and consistent in practical terms. The visualizations in part d) reinforce this finding by showing a clear separation between the salary distributions of the two groups.
 
 From a human resources perspective, a large salary gap between Entry-level and Senior-level employees is expected and appropriate. Senior-level employees typically possess significantly more experience, take on greater responsibilities, and contribute higher strategic value to the organization. As a result, a markedly higher level of compensation reflects a logical and structured pay progression aligned with career advancement.
 
@@ -397,6 +441,8 @@ cont_tab
 prop.table(cont_tab)
 ```
 
+The contingency table shows that both Male and Female employees are distributed across all job levels, with similar proportions in Entry, Mid, and Senior categories. No clear pattern or imbalance in gender distribution is observed. The “Other” category has very few observations, limiting meaningful interpretation.
+
 ## a.2) Hypotheses testing
 
 To formally assess whether there is a relationship between these two variables, the following hypotheses are established:
@@ -416,11 +462,11 @@ test$expected
 
 ### Assumption
 
-The assumptions of the chi-square test were examined prior to conducting the test.
+The assumptions of the chi-squared test were examined prior to conducting the test.
 
-The expected frequencies were calculated, and some cells were found to have expected counts less than 5. This violates the assumption required for the chi-square approximation to be valid.
+The expected frequencies were calculated, and some cells were found to have expected counts less than 5. This violates the assumption required for the chi-squared approximation to be valid.
 
-Therefore, a **Pearson’s chi-square test with a simulated p-value** was used to obtain a more reliable result.
+Therefore, a **Pearson’s chi-squared test with a simulated p-value** was used to obtain a more reliable result.
 
 ### Chi-squared test
 
@@ -444,14 +490,14 @@ chi_test
 
 ```{r}
 barplot(cont_tab,
-        col = c("#FFDA89", "#CCCCFF", "#EE6363"),
+        col = c("pink", "lightblue", "gray"),
         main = "Gender Distribution Across Job Levels",
         xlab = "Job Level",
         ylab = "Count")
 
 legend("topright",
        legend = rownames(cont_tab),
-       fill = c("#FFDA89", "#CCCCFF", "#EE6363"),
+       fill = c("pink", "lightblue", "gray"),
        bty = "n")
 ```
 
@@ -459,7 +505,7 @@ The stacked bar chart shows the distribution of gender across different job leve
 
 Overall, the proportions of Male and Female employees remain relatively consistent across Entry, Mid, and Senior levels. There is no clear shift in gender composition as job level increases. Although slight variations are observed, such as a marginally higher proportion of females in Senior roles, these differences are not substantial. The Executive level contains very few observations, making it difficult to draw meaningful conclusions for this category.
 
-Overall, the visualization does not suggest a strong association between Gender and Job Level, which is consistent with the results of the chi-square test.
+Overall, the visualization does not suggest a strong association between Gender and Job Level, which is consistent with the results of the chi-squared test.
 
 ## d) Conclusion at alpha = 0.02
 
@@ -503,6 +549,18 @@ Therefore, the estimated regression equation is:
 \newpage
 
 ## b) Interpretation of slope and intercept
+
+```{r}
+# Scatter plot with regression line
+plot(data$YearsOfExperience, data$Salary,
+     col = "orange",
+     main = "Salary vs Years of Experience",
+     xlab = "Years of Experience",
+     ylab = "Salary",
+     pch = 16)
+
+abline(model, col = "red", lwd = 2)
+```
 
 Overall, both coefficients align with standard compensation practices, where salary growth is systematically tied to increasing experience.
 
@@ -610,6 +668,7 @@ Overall, the visualisation suggests that performance scores are relatively simil
 anova_model <- aov(PerformanceScore ~ JobLevel, data = data)
 summary(anova_model)
 ```
+
 ### Results
 
 From the ANOVA output:
@@ -622,13 +681,13 @@ From the ANOVA output:
 
 At a significance level of alpha = 0.05, the p-value (0.859) is greater than alpha.
 
-=> Fail to reject the Null Hypothesis
+=\> Fail to reject the Null Hypothesis
 
-=> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
+=\> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
 
 ## c) Overall ANOVA test result is not statistically significant
 
-In this case, the overall one‑way ANOVA result is not statistically significant (p‑value = 0.859 > alpha). This indicates that there is insufficient statistical evidence to conclude that mean Performance Scores differ across Job Levels.
+In this case, the overall one‑way ANOVA result is not statistically significant (p‑value = 0.859 \> alpha). This indicates that there is insufficient statistical evidence to conclude that mean Performance Scores differ across Job Levels.
 
 ```{r}
 # Further support statement
@@ -639,6 +698,7 @@ This conclusion is further supported by the descriptive statistics. The mean Per
 
 As a result, there is no strong justification for conducting post‑hoc pairwise comparisons, since post‑hoc tests are designed to identify specific group differences only when the overall ANOVA is statistically significant.
 
+\
 **\*Suppose the overall test result is significant**
 
 Theoretically, ANOVA only answers a general question, whether there is at least one difference in mean Performance Scores across Job Levels, but it does not identify which specific job level pairs differ. Therefore, when the ANOVA result is statistically significant (p‑value \< 0.05), a post‑hoc test such as Tukey’s HSD is required to conduct pairwise comparisons while controlling for multiple testing errors.
@@ -653,9 +713,9 @@ TukeyHSD(anova_model)
 
 At a significance level of alpha = 0.05, the p-value (0.859) is greater than alpha.
 
-=> Fail to reject the Null Hypothesis
+=\> Fail to reject the Null Hypothesis
 
-=> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
+=\> This indicates that there is no statistically significant difference in mean Performance Score across job levels.
 
 From an organizational perspective, this suggests that employee performance is relatively consistent across different job levels. In other words, higher job levels do not necessarily correspond to higher performance scores.
 
@@ -663,3 +723,172 @@ This may indicate that the organization applies a standardized performance evalu
 
 Overall, the findings imply that while job level strongly influences compensation (as seen in earlier analyses), it does not appear to significantly differentiate employee performance. This reflects a structured organization where performance expectations are relatively uniform across different levels.
 
+\newpage
+
+# TACTICS SUPPORT
+
+# \textcolor{blue}{a) AI Reflection}
+
+This assignment was completed based on concepts learned from lectures and tutorials. AI tool (ChatGPT) was used only as a supportive tool to improve presentation, clarify implementation details, and enhance the readability of the outputs.
+
+Specifically, AI was used to:
+
+-   Refine grammar and improve the wording explanations
+
+-   Improve the formatting and readability of visualizations, including adjusting plot sizes, axis labels, and alignment
+
+-   In 1d) generate the correlation heatmap. The pairwise plot may appear unfamiliar, as it was not covered in this subject; however, it was included based on my knowledge from the Analytics Programming subject (Session 10: Visualization)
+
+-   In 2c) using the library (effsize) and implement Cohen’s d
+
+-   In 2d) enhance the boxplot by adding mean values
+
+# \textcolor{blue}{b) Thinking About Data Subject}
+
+Question 1:
+
+-   Module 3: Descriptive Statistics, Randomization
+
+-   Module 7: Correlation test
+
+Question 2:
+
+-   Module 4: T-test, Confidence Intervals, Bootstrapping
+
+Question 3:
+
+-   Module 2: Chi-squared Test
+
+Question 4:
+
+-   Module 8: Simple Linear Regression
+
+# \textcolor{blue}{c) Analytics Programming Subject}
+
+Module 2: Analyses
+
+-   Session 6: Data (Load Data, View Data,..)
+
+-   Session 10: Data Visualization (Wickham and Grolemund; Chapter 3, 28)
+
+# APPENDICES
+
+# \textcolor{blue}{Appendix A: Detailed Outlier Detection Calculations Using the IQR Method}
+
+## Methodology
+
+Outliers were detected using the standard IQR rule:
+
+-   IQR = Q3 − Q1
+
+-   Lower bound = Q1 − 1.5 × IQR
+
+-   Upper bound = Q3 + 1.5 × IQR
+
+In this case, If Max \> Upper =\> Having Outliers
+
+## 1. Salary
+
+-   Q1 = 54,284
+
+-   Q3 = 132,833
+
+IQR = 132,833 − 54,284 = 78,549
+
+Upper bound = 132,833 + 1.5 × 78,549 = 250,656
+
+Lower bound = 54,284 − 1.5 × 78,549 = −63,539
+
+-   Max value = 302,678
+
+=\> Since 302,678 \> 250,656, this indicates the presence of high-value outliers in Salary.
+
+## 2. Other numeric variables (No outliers detected)
+
+### Age
+
+-   IQR = 42 − 28 = 14
+
+-   Upper = 63
+
+-   Max = 59
+
+### YearsOfExperience
+
+-   IQR = 18 − 4 = 14
+
+-   Upper = 39
+
+-   Max = 35
+
+### PerformanceScore
+
+-   IQR = 4 − 2 = 2
+
+-   Upper = 7
+
+-   Max = 5
+
+### SatisfactionScore
+
+-   IQR = 8 − 3 = 5
+
+-   Upper = 15.5
+
+-   Max = 10
+
+### OvertimeHours
+
+-   IQR = 15 − 5 = 10
+
+-   Upper = 30
+
+-   Max = 19
+
+### TrainingHours
+
+-   IQR = 74 − 25 = 49
+
+-   Upper = 147.5
+
+-   Max = 97
+
+### ProjectsCompleted
+
+-   IQR = 14 − 5 = 9
+
+-   Upper = 27.5
+
+-   Max = 19
+
+### TeamSize
+
+-   IQR = 12 − 6 = 6
+
+-   Upper = 21
+
+-   Max = 14
+
+### RemoteWorkDays
+
+-   IQR = 4 − 1 = 3
+
+-   Upper = 8.5
+
+-   Max = 5
+
+### AttendanceRate
+
+-   IQR = 0.958 − 0.881 = 0.077
+
+-   Upper $≈$ 1.073
+
+-   Max = 0.999
+
+### PromotionCount
+
+-   IQR = 5 − 1 = 4
+
+-   Upper = 11
+
+-   Max = 5
